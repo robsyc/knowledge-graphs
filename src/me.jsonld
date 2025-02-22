@@ -1,0 +1,93 @@
+{
+    "@context": {
+        "ex": "http://example.org/",
+        "schema": "http://schema.org/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "https://robsyc.github.io/#me",
+            "@type": ["foaf:Agent", "foaf:Person", "schema:Person"],
+            "foaf:name": {
+                "@value": "robsyc",
+                "@type": "xsd:string"
+            },
+            "foaf:givenName": {
+                "@value": "Robbe",
+                "@type": "xsd:string"
+            },
+            "foaf:familyName": {
+                "@value": "Claeys",
+                "@type": "xsd:string"
+            },
+            "foaf:age": {
+                "@value": 24,
+                "@type": "xsd:integer"
+            },
+            "foaf:gender": {
+                "@value": "male",
+                "@type": "xsd:string"
+            },
+            "foaf:based_near": {
+                "@id": "https://www.wikidata.org/wiki/Q1296"
+            },
+            "foaf:knows": [
+                {
+                    "@id": "https://www.linkedin.com/in/henri-van-overmeire-5a18aa1ba/",
+                    "@type": "foaf:Person",
+                    "foaf:name": "Henri Van Overmeiren",
+                    "foaf:age": {
+                        "@value": 29,
+                        "@type": "xsd:integer"
+                    }
+                },
+                {
+                    "@id": "https://www.linkedin.com/in/benedict-coghe/",
+                    "@type": "foaf:Person",
+                    "foaf:name": {
+                        "@value": "Benedict Coghe",
+                        "@type": "xsd:string"
+                    },
+                    "foaf:age": {
+                        "@value": 27,
+                        "@type": "xsd:integer"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "https://www.wikidata.org/wiki/Q1296",
+            "foaf:name": [
+                {
+                    "@value": "Ghent",
+                    "@language": "en"
+                },
+                {
+                    "@value": "Gent", 
+                    "@language": "nl"
+                }
+            ]
+        },
+        {
+            "@id": "https://www.wikidata.org/wiki/Q1137665",
+            "@type": "foaf:Organization",
+            "foaf:name": [
+                {
+                    "@value": "Ghent University",
+                    "@language": "en"
+                },
+                {
+                    "@value": "Universiteit Gent",
+                    "@language": "nl"
+                }
+            ],
+            "foaf:based_near": {
+                "@id": "https://www.wikidata.org/wiki/Q1296"
+            },
+            "foaf:member": {
+                "@id": "https://robsyc.github.io/#me"
+            }
+        }
+    ]
+}

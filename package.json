@@ -1,0 +1,16 @@
+{
+  "name": "knowledge-graphs",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "rdf-dereference": "^4.0.0",
+    "rdf-stores": "^2.1.1",
+    "streamify-array": "^2.0.0"
+  }
+}
