@@ -13,6 +13,15 @@ Hi, my name is `robsyc`, and I'm taking the Knowledge Graph course at the Ghent 
     - stores quads in a [`RdfStore`](https://github.com/rubensworks/rdf-stores.js)
     - checks quad counts, redudancy and/or inconsistencies
 
+## Quickstart
+
+```bash
+git clone https://github.com/robsyc/knowledge-graphs.git
+cd knowledge-graphs
+bun i
+bun run src/parse.ts
+```
+
 ## Important lessons learned
 
 - Trurtle files are much easier to work with than JSON-LD
