@@ -24,6 +24,7 @@ bun run src/parse.ts
 
 ## Important lessons learned
 
+- After some back-and-forth, I was able to parse both files such that they're both valid and consistent RDF
 - Turtle files are much easier to work with than JSON-LD
 - Specifying the datatype & language is much more verbose in JSON-LD
 - Don't forget about `@id` and `@type` attributes in JSON-LD otherwise inconsistencies will arise
