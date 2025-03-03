@@ -1,30 +1,34 @@
-@prefix ex: <http://example.org/>.
 @prefix schema: <http://schema.org/>.
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+# https://lov.linkeddata.es/dataset/lov
 
-<https://robsyc.github.io/#me> a foaf:Agent, foaf:Person, schema:Person;
-    foaf:name "robsyc"^^xsd:string;
-    foaf:givenName "Robbe"^^xsd:string;
-    foaf:familyName "Claeys"^^xsd:string;
-    foaf:age "24"^^xsd:integer;
-    foaf:gender "male"^^xsd:string;
-    foaf:based_near <https://www.wikidata.org/wiki/Q1296>;
-    foaf:knows <https://www.linkedin.com/in/henri-van-overmeire-5a18aa1ba/>;
-    foaf:knows <https://www.linkedin.com/in/benedict-coghe/> .
+<https://robsyc.xyz#me> a schema:Person;
+    schema:name "robsyc"^^xsd:string;
+    schema:image <https://robsyc.xyz/assets/img/me.png>;
+    schema:gender schema:Male;
+    schema:givenName "Robbe"^^xsd:string;
+    schema:familyName "Claeys"^^xsd:string;
+    # schema:email "robbe.claeys@gmail.com"^^xsd:string;
+    schema:birthDate "2000-04-03"^^xsd:date;
+    schema:birthPlace <https://www.wikidata.org/wiki/Q1296>;     # Ghent
+    schema:nationality <https://www.wikidata.org/wiki/Q31>;      # Belgium (country)
+    schema:affiliation <https://www.wikidata.org/wiki/Q1137665>; # Ghent University (organization)
+    
+    schema:knows <https://sandervandamme.com#me>;
+    schema:knows <https://www.ebisi.be/stijndeknudt>;
 
-<https://www.linkedin.com/in/henri-van-overmeire-5a18aa1ba/> a foaf:Person;
-    foaf:name "Henri Van Overmeiren"^^xsd:string;
-    foaf:age "29"^^xsd:integer .
+    schema:knows <https://www.linkedin.com/in/henri-van-overmeire-5a18aa1ba/>;
+    schema:knows <https://www.linkedin.com/in/benedict-coghe/> .
 
-<https://www.linkedin.com/in/benedict-coghe/> a foaf:Person;
-    foaf:name "Benedict Coghe"^^xsd:string;
-    foaf:age "27"^^xsd:integer .
+<https://www.wikidata.org/wiki/Q1137665> a schema:CollegeOrUniversity;
+    schema:name "Ghent University"@en, "Universiteit Gent"@nl;
+    schema:location <https://www.wikidata.org/wiki/Q1296>.
 
-<https://www.wikidata.org/wiki/Q1296>
-    foaf:name "Ghent"@en, "Gent"@nl .
+<https://pietercolpaert.be/teaching/kg/> a schema:Course;
+    schema:name "Knowledge Graphs";
+    schema:provider <https://www.wikidata.org/wiki/Q1137665>;
+    schema:hasCourseInstance <https://pietercolpaert.be/teaching/kg/#2024-2025>.
 
-<https://www.wikidata.org/wiki/Q1137665> a foaf:Organization;
-    foaf:name "Ghent University"@en, "Universiteit Gent"@nl;
-    foaf:based_near <https://www.wikidata.org/wiki/Q1296>;
-    foaf:member <https://robsyc.github.io/#me> .
+<https://pietercolpaert.be/teaching/kg/#2024-2025> a schema:CourseInstance;
+    schema:instructor <https://pietercolpaert.be#me>;
+    schema:attendee <https://robsyc.xyz#me>.

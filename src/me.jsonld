@@ -1,92 +1,96 @@
 {
     "@context": {
-        "ex": "http://example.org/",
         "schema": "http://schema.org/",
-        "foaf": "http://xmlns.com/foaf/0.1/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "https://robsyc.github.io/#me",
-            "@type": ["foaf:Agent", "foaf:Person", "schema:Person"],
-            "foaf:name": {
+            "@id": "https://robsyc.xyz#me",
+            "@type": "schema:Person",
+            "schema:name": {
                 "@value": "robsyc",
                 "@type": "xsd:string"
             },
-            "foaf:givenName": {
+            "schema:image": {
+                "@id": "https://robsyc.xyz/assets/img/me.png"
+            },
+            "schema:gender": {
+                "@id": "schema:Male"
+            },
+            "schema:givenName": {
                 "@value": "Robbe",
                 "@type": "xsd:string"
             },
-            "foaf:familyName": {
+            "schema:familyName": {
                 "@value": "Claeys",
                 "@type": "xsd:string"
             },
-            "foaf:age": {
-                "@value": 24,
-                "@type": "xsd:integer"
+            "schema:birthDate": {
+                "@value": "2000-04-03",
+                "@type": "xsd:date"
             },
-            "foaf:gender": {
-                "@value": "male",
-                "@type": "xsd:string"
-            },
-            "foaf:based_near": {
+            "schema:birthPlace": {
                 "@id": "https://www.wikidata.org/wiki/Q1296"
             },
-            "foaf:knows": [
+            "schema:nationality": {
+                "@id": "https://www.wikidata.org/wiki/Q31"
+            },
+            "schema:affiliation": {
+                "@id": "https://www.wikidata.org/wiki/Q1137665"
+            },
+            "schema:knows": [
                 {
-                    "@id": "https://www.linkedin.com/in/henri-van-overmeire-5a18aa1ba/",
-                    "@type": "foaf:Person",
-                    "foaf:name": "Henri Van Overmeiren",
-                    "foaf:age": {
-                        "@value": 29,
-                        "@type": "xsd:integer"
-                    }
+                    "@id": "https://sandervandamme.com#me"
                 },
                 {
-                    "@id": "https://www.linkedin.com/in/benedict-coghe/",
-                    "@type": "foaf:Person",
-                    "foaf:name": {
-                        "@value": "Benedict Coghe",
-                        "@type": "xsd:string"
-                    },
-                    "foaf:age": {
-                        "@value": 27,
-                        "@type": "xsd:integer"
-                    }
-                }
-            ]
-        },
-        {
-            "@id": "https://www.wikidata.org/wiki/Q1296",
-            "foaf:name": [
-                {
-                    "@value": "Ghent",
-                    "@language": "en"
+                    "@id": "https://www.ebisi.be/stijndeknudt"
                 },
                 {
-                    "@value": "Gent", 
-                    "@language": "nl"
+                    "@id": "https://www.linkedin.com/in/henri-van-overmeire-5a18aa1ba/"
+                },
+                {
+                    "@id": "https://www.linkedin.com/in/benedict-coghe/"
                 }
             ]
         },
         {
             "@id": "https://www.wikidata.org/wiki/Q1137665",
-            "@type": "foaf:Organization",
-            "foaf:name": [
+            "@type": "schema:CollegeOrUniversity",
+            "schema:name": [
                 {
                     "@value": "Ghent University",
                     "@language": "en"
                 },
                 {
-                    "@value": "Universiteit Gent",
+                    "@value": "Universiteit Gent", 
                     "@language": "nl"
                 }
             ],
-            "foaf:based_near": {
+            "schema:location": {
                 "@id": "https://www.wikidata.org/wiki/Q1296"
+            }
+        },
+        {
+            "@id": "https://pietercolpaert.be/teaching/kg/",
+            "@type": "schema:Course",
+            "schema:name": {
+                "@value": "Knowledge Graphs"
             },
-            "foaf:member": {
-                "@id": "https://robsyc.github.io/#me"
+            "schema:provider": {
+                "@id": "https://www.wikidata.org/wiki/Q1137665"
+            },
+            "schema:hasCourseInstance": {
+                "@id": "https://pietercolpaert.be/teaching/kg/#2024-2025"
+            }
+        },
+        {
+            "@id": "https://pietercolpaert.be/teaching/kg/#2024-2025",
+            "@type": "schema:CourseInstance",
+            "schema:instructor": {
+                "@id": "https://pietercolpaert.be#me"
+            },
+            "schema:attendee": {
+                "@id": "https://robsyc.xyz#me"
             }
         }
     ]
