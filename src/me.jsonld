@@ -5,14 +5,14 @@
     },
     "@graph": [
         {
-            "@id": "https://robsyc.xyz#me",
+            "@id": "https://www.robsyc.xyz#me",
             "@type": "schema:Person",
             "schema:name": {
                 "@value": "robsyc",
                 "@type": "xsd:string"
             },
             "schema:image": {
-                "@id": "https://robsyc.xyz/assets/img/me.png"
+                "@id": "https://www.robsyc.xyz/assets/img/me.png"
             },
             "schema:gender": {
                 "@id": "schema:Male"
@@ -46,10 +46,19 @@
                     "@id": "https://www.ebisi.be/stijndeknudt"
                 },
                 {
-                    "@id": "https://www.linkedin.com/in/henri-van-overmeire-5a18aa1ba/"
+                    "@id": "http://lippelo.me/#erwin.geeraerts"
                 },
                 {
-                    "@id": "https://www.linkedin.com/in/benedict-coghe/"
+                    "@id": "https://gc-cc.github.io/#me"
+                },
+                {
+                    "@id": "https://tobiashendrickx.be/about#me"
+                },
+                {
+                    "@id": "https://bavop.github.io/rep/#me"
+                },
+                {
+                    "@id": "https://ginfinai.be/#me"
                 }
             ]
         },
@@ -90,7 +99,7 @@
                 "@id": "https://pietercolpaert.be#me"
             },
             "schema:attendee": {
-                "@id": "https://robsyc.xyz#me"
+                "@id": "https://www.robsyc.xyz#me"
             }
         }
     ]

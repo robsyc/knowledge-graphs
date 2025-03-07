@@ -2,23 +2,25 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 # https://lov.linkeddata.es/dataset/lov
 
-<https://robsyc.xyz#me> a schema:Person;
+<https://www.robsyc.xyz#me> a schema:Person;
     schema:name "robsyc"^^xsd:string;
-    schema:image <https://robsyc.xyz/assets/img/me.png>;
+    schema:image <https://www.robsyc.xyz/assets/img/me.png>;
     schema:gender schema:Male;
     schema:givenName "Robbe"^^xsd:string;
     schema:familyName "Claeys"^^xsd:string;
-    # schema:email "robbe.claeys@gmail.com"^^xsd:string;
     schema:birthDate "2000-04-03"^^xsd:date;
-    schema:birthPlace <https://www.wikidata.org/wiki/Q1296>;     # Ghent
+    schema:birthPlace <https://www.wikidata.org/wiki/Q1296>;     # Ghent (city)
     schema:nationality <https://www.wikidata.org/wiki/Q31>;      # Belgium (country)
-    schema:affiliation <https://www.wikidata.org/wiki/Q1137665>; # Ghent University (organization)
+    schema:affiliation <https://www.wikidata.org/wiki/Q1137665>; # Ghent University (CollegeOrUniversity)
     
-    schema:knows <https://sandervandamme.com#me>;
-    schema:knows <https://www.ebisi.be/stijndeknudt>;
-
-    schema:knows <https://www.linkedin.com/in/henri-van-overmeire-5a18aa1ba/>;
-    schema:knows <https://www.linkedin.com/in/benedict-coghe/> .
+    schema:knows 
+        <https://sandervandamme.com#me>,
+        <https://www.ebisi.be/stijndeknudt>,
+        <http://lippelo.me/#erwin.geeraerts>,
+        <https://gc-cc.github.io/#me>,
+        <https://tobiashendrickx.be/about#me>,
+        <https://bavop.github.io/rep/#me>,
+        <https://ginfinai.be/#me>.
 
 <https://www.wikidata.org/wiki/Q1137665> a schema:CollegeOrUniversity;
     schema:name "Ghent University"@en, "Universiteit Gent"@nl;
@@ -31,4 +33,4 @@
 
 <https://pietercolpaert.be/teaching/kg/#2024-2025> a schema:CourseInstance;
     schema:instructor <https://pietercolpaert.be#me>;
-    schema:attendee <https://robsyc.xyz#me>.
+    schema:attendee <https://www.robsyc.xyz#me>.
