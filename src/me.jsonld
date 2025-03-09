@@ -1,7 +1,7 @@
 {
     "@context": {
-        "schema": "http://schema.org/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "schema": "https://schema.org/",
+        "xsd": "https://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
@@ -39,6 +39,9 @@
                 "@id": "https://www.wikidata.org/wiki/Q1137665"
             },
             "schema:knows": [
+                {
+                    "@id": "https://pietercolpaert.be#me"
+                },
                 {
                     "@id": "https://sandervandamme.com#me"
                 },

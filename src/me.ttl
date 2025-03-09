@@ -1,5 +1,5 @@
-@prefix schema: <http://schema.org/>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix schema: <https://schema.org/>.
+@prefix xsd: <https://www.w3.org/2001/XMLSchema#>.
 # https://lov.linkeddata.es/dataset/lov
 
 <https://www.robsyc.xyz#me> a schema:Person;
@@ -14,6 +14,7 @@
     schema:affiliation <https://www.wikidata.org/wiki/Q1137665>; # Ghent University (CollegeOrUniversity)
     
     schema:knows 
+        <https://pietercolpaert.be#me>,
         <https://sandervandamme.com#me>,
         <https://www.ebisi.be/stijndeknudt>,
         <http://lippelo.me/#erwin.geeraerts>,
