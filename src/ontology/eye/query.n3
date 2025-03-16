@@ -1,0 +1,13 @@
+@prefix ex: <http://example.com/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+{
+  ?picture a foaf:Image;
+    foaf:depicts ?person.
+  ?person a foaf:Person;
+      foaf:name ?name.
+} => {
+  (
+    ?picture
+    ?name
+  ) a ex:Result.
+}.
