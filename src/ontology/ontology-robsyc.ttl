@@ -1,0 +1,56 @@
+# This RDF document describes the ontology of the robsyc.xyz in Turtle syntax.
+# It is used to define the classes and properties of the website.
+
+# with the hash in the ontology, without is the document
+@prefix robsyc: <https://www.robsyc.xyz/rdf/ontology-robsyc.ttl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+robsyc:Photo a rdfs:Class;
+    rdfs:subClassOf foaf:Image;
+    rdfs:label "Photo"@en;
+    rdfs:comment "A visual representation of a scene or object."@en.
+
+robsyc:Author a rdfs:Class;
+    rdfs:subClassOf foaf:Person;
+    rdfs:label "Author"@en;
+    rdfs:comment "A person who creates a photo."@en.
+
+robsyc:hasName a rdf:Property;
+    rdfs:subPropertyOf foaf:name;
+    rdfs:label "hasName"@en;
+    rdfs:range xsd:string;
+    rdfs:comment "Name"@en.
+
+robsyc:hasTitle a rdf:Property;
+    rdfs:label "hasTitle"@en;
+    rdfs:domain robsyc:Photo;
+    rdfs:range xsd:string;
+    rdfs:comment "Title of the photo."@en.
+
+robsyc:hasAuthor a rdf:Property;
+    rdfs:subPropertyOf foaf:maker;
+    rdfs:label "hasAuthor"@en;
+    rdfs:domain robsyc:Photo;
+    rdfs:range robsyc:Author;
+    rdfs:comment "Links a photo to its author."@en.
+
+robsyc:takenIn a rdf:Property;
+    rdfs:subPropertyOf foaf:based_near;
+    rdfs:label "takenIn"@en;
+    rdfs:domain robsyc:Photo;
+    rdfs:comment "Place where the photo was taken."@en.
+
+robsyc:depicts a rdf:Property;
+    rdfs:subPropertyOf foaf:depicts;
+    rdfs:label "depicts"@en;
+    rdfs:domain robsyc:Photo;
+    rdfs:comment "Thing depicted in the photo."@en.
+
+robsyc:hasCaption a rdf:Property;
+    rdfs:label "hasCaption"@en;
+    rdfs:domain robsyc:Photo;
+    rdfs:range xsd:string;
+    rdfs:comment "Caption of the photo."@en.

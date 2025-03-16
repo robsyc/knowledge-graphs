@@ -6,9 +6,9 @@ Hi, my name is `robsyc`, and I'm taking the Knowledge Graph course at the Ghent 
 
 ## Repo structure
 
-- `me.ttl`: me and my relations to things, defined in the turtle RDF format.
-- `me.jsonld`: same as above, but in JSON-LD format.
-- `parse.ts`: a script that 
+- `src/ontology/`: contains the ontology files
+- `src/kg/`: contains the knowledge graph files (TTL and JSON-LD)
+- `src/kg/parse.ts`: a script that 
     - parses both files using [`rdf-dereferencer`](https://github.com/rubensworks/rdf-dereference.js/tree/master)
     - stores quads in a [`RdfStore`](https://github.com/rubensworks/rdf-stores.js)
     - checks quad counts, redudancy and/or inconsistencies
@@ -19,7 +19,9 @@ Hi, my name is `robsyc`, and I'm taking the Knowledge Graph course at the Ghent 
 git clone https://github.com/robsyc/knowledge-graphs.git
 cd knowledge-graphs
 bun i
-bun run src/parse.ts
+
+# Run the parser to check if both KG files (TTL and JSON-LD) are valid and consistent
+bun run src/kg/parse.ts
 ```
 
 ## Important lessons learned
